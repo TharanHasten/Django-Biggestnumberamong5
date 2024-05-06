@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Max of Five Numbers</title>
+</head>
+<body>
+    <h2>Find Maximum of Five Numbers</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="num1">Number 1:</label>
+        <input type="number" name="num1" required><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" name="num2" required><br>
+        <label for="num3">Number 3:</label>
+        <input type="number" name="num3" required><br>
+        <label for="num4">Number 4:</label>
+        <input type="number" name="num4" required><br>
+        <label for="num5">Number 5:</label>
+        <input type="number" name="num5" required><br>
+        <button type="submit">Find Max</button>
+    </form>
+    {% if max_number %}
+    <p>The maximum of the five numbers is: {{ max_number }}</p>
+    {% endif %}
+</body>
+</html>
