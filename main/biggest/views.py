@@ -1,5 +1,6 @@
 from django.shortcuts import render
 def max_of_five(request):
+    max_number= None
     if request.method == 'POST':
         num1 = int(request.POST['num1'])
         num2 = int(request.POST['num2'])
@@ -18,4 +19,4 @@ def max_of_five(request):
         if num5 > max_number:
             max_number = num5
 
-    return render(request, 'max_number.html', {'max_number': max_number})
+    return render(request, 'new.html', {'max_number': max_number})
